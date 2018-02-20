@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM Rubik's Cube</title>
+    <link rel="stylesheet" href="cages-style.css"/>
+</head>
+<body>
+    <div id="cube">
+        <div class="stage" style = "transform:rotateX(-20deg) rotateY(45deg)">
+            <div class="cages c1 front top left">
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="core corner" id="b1" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c2 front top v-v-mid">
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="core twoface" id="b2" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c3 front top right">
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="core corner" id="b3" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c4 front left a-a-mid">
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div class="core twoface" id="b4" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c5 front v-v-mid a-a-mid">
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core layer_center" id="b5" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c6 front right a-a-mid">
+                <div class="hover for2face"></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core twoface" id="b6" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c7 front bottom left">
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="core corner" id="b7" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c8 front bottom v-v-mid">
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="core twoface" id="b8" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c9 front bottom right">
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="core corner" id="b9" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c10 v-a-mid top left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="core twoface" id="b10" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c11 v-a-mid top v-v-mid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="core layer_center" id="b11" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c12 v-a-mid top right">
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="core twoface" id="b12" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c13 v-a-mid left a-a-mid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div class="core layer_center" id="b13" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c14 v-a-mid v-v-mid a-a-mid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core" id="b14" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c15 v-a-mid right a-a-mid">
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core layer_center" id="b15" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c16 v-a-mid bottom left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="core twoface" id="b16" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c17 v-a-mid bottom v-v-mid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="core layer_center" id="b17" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c18 v-a-mid bottom right">
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="core twoface" id="b18" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c19 back top left">
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="core corner" id="b19" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c20 back top v-v-mid">
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div class="core twoface" id="b20" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c21 back top right">
+                <div></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="core corner" id="b21" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c22 back left a-a-mid">
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div class="core twoface" id="b22" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c23 back v-v-mid a-a-mid">
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core layer_center" id="b23" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c24 back right a-a-mid">
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="core twoface" id="b24" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c25 back bottom left">
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="core corner" id="b25" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c26 back bottom v-v-mid">
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div></div>
+                <div></div>
+                <div class="hover for2face"></div>
+                <div class="core twoface" id="b26" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cages c27 back bottom right">
+                <div></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div></div>
+                <div></div>
+                <div class="hover"></div>
+                <div class="core corner" id="b27" style="transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)">
+                    <div class="unit-block">
+                        <div></div>
+                        <div class="outer"></div>
+                        <div class="outer"></div>
+                        <div></div>
+                        <div></div>
+                        <div class="outer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hint">
+        <p>鼠标点击选择层，<br>按Q/E执行顺/逆时针旋转，<br>按WASD调整镜头，<br>空格镜头归位。</p>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

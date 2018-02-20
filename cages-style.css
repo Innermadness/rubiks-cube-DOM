@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei",sans-serif;
+    min-width: 860px;
+}
+#cube {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    overflow: hidden;
+}
+.stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+}
+.cages {
+    transform-style: preserve-3d;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    box-sizing: border-box;
+    /*transform-origin: 50% 50%;*/
+}
+
+.cages:nth-child(1) {
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+}
+.cages:nth-child(2) {
+    transform: translateX(0px) translateY(-100px) translateZ(100px);
+}
+.cages:nth-child(3) {
+    transform: translateX(100px) translateY(-100px) translateZ(100px);
+}
+.cages:nth-child(4) {
+    transform: translateX(-100px) translateY(0px) translateZ(100px);
+}
+.cages:nth-child(5) {
+    transform: translateX(0px) translateY(0px) translateZ(100px);
+}
+.cages:nth-child(6) {
+    transform: translateX(100px) translateY(0px) translateZ(100px);
+}
+.cages:nth-child(7) {
+    transform: translateX(-100px) translateY(100px) translateZ(100px);
+}
+.cages:nth-child(8) {
+    transform: translateX(0px) translateY(100px) translateZ(100px);
+}
+.cages:nth-child(9) {
+    transform: translateX(100px) translateY(100px) translateZ(100px);
+}
+.cages:nth-child(10) {
+    transform: translateX(-100px) translateY(-100px) translateZ(0px);
+}
+.cages:nth-child(11) {
+    transform: translateX(0px) translateY(-100px) translateZ(0px);
+}
+.cages:nth-child(12) {
+    transform: translateX(100px) translateY(-100px) translateZ(0px);
+}
+.cages:nth-child(13) {
+    transform: translateX(-100px) translateY(0px) translateZ(0px);
+}
+.cages:nth-child(14) {
+    transform: translateX(0px) translateY(0px) translateZ(0px);
+}
+.cages:nth-child(15) {
+    transform: translateX(100px) translateY(0px) translateZ(0px);
+}
+.cages:nth-child(16) {
+    transform: translateX(-100px) translateY(100px) translateZ(0px);
+}
+.cages:nth-child(17) {
+    transform: translateX(0px) translateY(100px) translateZ(0px);
+}
+.cages:nth-child(18) {
+    transform: translateX(100px) translateY(100px) translateZ(0px);
+}
+.cages:nth-child(19) {
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+}
+.cages:nth-child(20) {
+    transform: translateX(0px) translateY(-100px) translateZ(-100px);
+}
+.cages:nth-child(21) {
+    transform: translateX(100px) translateY(-100px) translateZ(-100px);
+}
+.cages:nth-child(22) {
+    transform: translateX(-100px) translateY(0px) translateZ(-100px);
+}
+.cages:nth-child(23) {
+    transform: translateX(0px) translateY(0px) translateZ(-100px);
+}
+.cages:nth-child(24) {
+    transform: translateX(100px) translateY(0px) translateZ(-100px);
+}
+.cages:nth-child(25) {
+    transform: translateX(-100px) translateY(100px) translateZ(-100px);
+}
+.cages:nth-child(26) {
+    transform: translateX(0px) translateY(100px) translateZ(-100px);
+}
+.cages:nth-child(27) {
+    transform: translateX(100px) translateY(100px) translateZ(-100px);
+}
+
+.unit-block {
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    box-sizing: border-box;
+    transform-origin: 50px 50px 0;
+}
+
+.cages>div:not([class~=core]) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+
+.cages>div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+.cages>div:nth-child(2) {
+    transform: rotateY(90deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+.cages>div:nth-child(3) {
+    transform: rotateY(180deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+.cages>div:nth-child(4) {
+    transform: rotateY(270deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+.cages>div:nth-child(5) {
+    transform: rotateY(0deg) rotateX(90deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+.cages>div:nth-child(6) {
+    transform: rotateY(0deg) rotateX(-90deg) translateZ(50px);
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.cages:nth-child(1) {
+    transform-origin: 150px 150px -100px;
+}
+/*=================================================*/
+.core {
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.c1>.core {
+    transform-origin: 150px 150px -100px;
+    transform: rotateY(0deg);
+}
+.c2>.core {
+    transform-origin: 50px 150px -100px;
+}
+.c3>.core {
+    transform-origin: -50px 150px -100px;
+}
+.c4>.core {
+    transform-origin: 150px 50px -100px;
+}
+.c5>.core {
+    transform-origin: 50px 50px -100px;
+}
+.c6>.core {
+    transform-origin: -50px 50px -100px;
+}
+.c7>.core {
+    transform-origin: 150px -50px -100px;
+}
+.c8>.core {
+    transform-origin: 50px -50px -100px;
+}
+.c9>.core {
+    transform-origin: -50px -50px -100px;
+}
+.c10>.core {
+    transform-origin: 150px 150px 0;
+}
+.c11>.core {
+    transform-origin: 50px 150px 0;
+}
+.c12>.core {
+    transform-origin: -50px 150px 0;
+}
+.c13>.core {
+    transform-origin: 150px 50px 0;
+}
+.c14>.core {
+    transform-origin: 50px 50px 0;
+}
+.c15>.core {
+    transform-origin: -50px 50px 0;
+}
+.c16>.core {
+    transform-origin: 150px -50px 0;
+}
+.c17>.core {
+    transform-origin: 50px -50px 0;
+}
+.c18>.core {
+    transform-origin: -50px -50px 0;
+}
+.c19>.core {
+    transform-origin: 150px 150px 100px;
+}
+.c20>.core {
+    transform-origin: 50px 150px 100px;
+}
+.c21>.core {
+    transform-origin: -50px 150px 100px;
+}
+.c22>.core {
+    transform-origin: 150px 50px 100px;
+}
+.c23>.core {
+    transform-origin: 50px 50px 100px;
+}
+.c24>.core {
+    transform-origin: -50px 50px 100px;
+}
+.c25>.core {
+    transform-origin: 150px -50px 100px;
+}
+.c26>.core {
+    transform-origin: 50px -50px 100px;
+}
+.c27>.core {
+    transform-origin: -50px -50px 100px;
+}
+
+
+.unit-block>div {
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100px;
+    height: 100px;
+    /*box-shadow: none;*/
+    /*transition: all 0.3s;*/
+}
+.unit-block>div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50px);
+    /*background: red;*/
+}
+.unit-block>div:nth-child(2) {
+    transform: rotateY(90deg) translateZ(50px);
+    /*background: yellow;*/
+}
+.unit-block>div:nth-child(3) {
+    transform: rotateY(180deg) translateZ(50px);
+    /*background: blue;*/
+}
+.unit-block>div:nth-child(4) {
+    transform: rotateY(270deg) translateZ(50px);
+    /*background: green;*/
+}
+.unit-block>div:nth-child(5) {
+    transform: rotateY(0deg) rotateX(90deg) translateZ(50px);
+    /*background: lightgray;*/
+}
+.unit-block>div:nth-child(6) {
+    transform: rotateY(0deg) rotateX(-90deg) translateZ(50px);
+    /*background: black;*/
+}
+
+#hint {
+    position: fixed;
+    top: 0;
+    left: 10px;
+}
+#hint>p {
+    font-size: 14px;
+}
